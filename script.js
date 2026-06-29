@@ -33,8 +33,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function initialize(){
 
-    // tombol claim disembunyikan dulu
     claimButton.style.display = "none";
+
+    waitFirebase();
 
 }
 
@@ -47,7 +48,7 @@ function loginSuccess(user){
 
     currentUser = user;
 
-    loginButton.style.display = "none";
+    loginButton.innerHTML = user.displayName;
 
     claimButton.style.display = "inline-flex";
 
@@ -66,3 +67,52 @@ function logoutUser(){
     claimButton.style.display = "none";
 
 }
+
+function waitFirebase(){
+
+    const timer = setInterval(()=>{
+
+        if(window.auth){
+
+            clearInterval(timer);
+
+            auth = window.auth;
+            provider = window.provider;
+
+            startAuth();
+
+        }
+
+    },100);
+
+}
+
+function startAuth(){
+
+    onAuthStateChanged(auth,(user)=>{
+
+        if(user){
+
+            loginSuccess(user);
+
+        }
+
+    });
+
+}
+
+loginButton.addEventListener("click",async()=>{
+
+    try{
+
+        await signInWithPopup(auth,provider);
+
+    }
+
+    catch(err){
+
+        alert(err.message);
+
+    }
+
+});
