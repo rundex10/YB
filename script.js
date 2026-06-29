@@ -165,44 +165,57 @@ async function loginSuccess(user) {
 
 async function createUserIfNeeded(user) {
 
-    const userDoc = docRef(db, "users", user.uid);
+    try {
 
-    const snapshot = await getDocRef(userDoc);
+        const userDoc = docRef(db, "users", user.uid);
 
-    if (!snapshot.exists()) {
+        console.log("Checking user:", user.uid);
 
-        await setDocRef(userDoc, {
+        const snapshot = await getDocRef(userDoc);
 
-            displayName: user.displayName,
+        if (!snapshot.exists()) {
 
-            email: user.email,
+            console.log("Creating new user...");
 
-            photoURL: user.photoURL,
+            await setDocRef(userDoc, {
 
-            username: "",
+                displayName: user.displayName,
 
-            wallet: "0x9657543AFF56653C6C1750874B5b0b631634958e",
+                email: user.email,
 
-            verified: false,
+                photoURL: user.photoURL,
 
-            signupBonus: 25,
+                username: "",
 
-            bonusClaimed: false,
+                wallet: "0x9657543AFF56653C6C1750874B5b0b631634958e",
 
-            createdAt: serverTimestampRef()
+                verified: false,
 
-        });
+                signupBonus: 25,
 
-        console.log("User created.");
+                bonusClaimed: false,
 
-    } else {
+                createdAt: serverTimestampRef()
 
-        console.log("User already exists.");
+            });
+
+            console.log("✅ User created successfully.");
+
+        } else {
+
+            console.log("✅ User already exists.");
+
+        }
+
+    } catch (error) {
+
+        console.error("Firestore Error:", error);
+
+        alert("Firestore Error:\n" + error.message);
 
     }
 
 }
-
 // =============================
 // Dropdown
 // =============================
