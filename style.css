@@ -396,6 +396,30 @@ footer{
 
 }
 
+#walletMenu{
+
+    display:none;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    transition:.25s;
+
+}
+
+#walletMenu:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
 #profileBox:hover{
 
     background:rgba(255,255,255,.08);
