@@ -281,7 +281,7 @@ function logoutUI() {
 }
 
 claimButton.addEventListener("click",()=>{
-
+console.log("Claim Bonus clicked");
     bonusModal.style.display="flex";
 
 });
