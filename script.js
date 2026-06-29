@@ -24,6 +24,13 @@ let currentUser = null;
 // =============================
 // Elements
 // =============================
+const bonusModal=document.getElementById("bonusModal");
+
+const bonusCode=document.getElementById("bonusCode");
+
+const claimNow=document.getElementById("claimNow");
+
+const closeBonus=document.getElementById("closeBonus");
 
 const loginButton = document.getElementById("loginButton");
 
@@ -272,3 +279,35 @@ function logoutUI() {
     dropdown.style.display = "none";
 
 }
+
+claimButton.addEventListener("click",()=>{
+
+    bonusModal.style.display="flex";
+
+});
+
+closeBonus.addEventListener("click",()=>{
+
+    bonusModal.style.display="none";
+
+});
+
+claimNow.addEventListener("click",()=>{
+
+    const code=bonusCode.value.trim().toUpperCase();
+
+    if(code==="ABC123"){
+
+        alert("🎉 Congratulations!\n\nYou received $25 Signup Bonus.");
+
+        bonusModal.style.display="none";
+
+    }
+
+    else{
+
+        alert("Invalid invitation code.");
+
+    }
+
+});
