@@ -24,6 +24,8 @@ let currentUser = null;
 // =============================
 // Elements
 // =============================
+const walletMenu = document.getElementById("walletMenu");
+
 const bonusModal=document.getElementById("bonusModal");
 
 const bonusCode=document.getElementById("bonusCode");
