@@ -539,3 +539,69 @@ PROFILE DROPDOWN
     color:white;
 
 }
+
+/* =======================
+BONUS MODAL
+======================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.6);
+
+    z-index:9999;
+
+}
+
+.modalContent{
+
+    width:420px;
+
+    background:#101826;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.modalContent input{
+
+    width:100%;
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    border:none;
+
+    font-size:18px;
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+}
+
+.modalContent button{
+
+    width:100%;
+
+    margin-top:12px;
+
+}
