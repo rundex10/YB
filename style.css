@@ -605,3 +605,157 @@ BONUS MODAL
     margin-top:12px;
 
 }
+
+/* ==========================
+   WALLET PAGE
+========================== */
+
+.walletPage{
+
+    width:min(900px,92%);
+
+    margin:60px auto;
+
+}
+
+.walletCard{
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    color:white;
+
+    box-shadow:0 25px 60px rgba(37,99,235,.35);
+
+}
+
+.walletCard p{
+
+    opacity:.8;
+
+}
+
+.walletCard h1{
+
+    font-size:56px;
+
+    margin:20px 0;
+
+}
+
+#walletAddress{
+
+    font-size:14px;
+
+    opacity:.85;
+
+    word-break:break-all;
+
+}
+
+.assetCard{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#101826;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:25px;
+
+}
+
+.assetLeft{
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+.assetRight{
+
+    text-align:right;
+
+}
+
+.assetRight h3{
+
+    font-size:26px;
+
+}
+
+.assetRight small{
+
+    color:#a8b6c7;
+
+}
+
+.walletButtons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.walletButtons button{
+
+    flex:1;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+#topupButton{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+#topupButton:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#sendButton{
+
+    background:#1f2937;
+
+    color:white;
+
+}
+
+#sendButton:hover{
+
+    background:#374151;
+
+}
