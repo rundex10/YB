@@ -144,3 +144,45 @@ loginButton.addEventListener("click",async()=>{
     }
 
 });
+
+profileBox.addEventListener("click",()=>{
+
+    if(dropdown.style.display=="block"){
+
+        dropdown.style.display="none";
+
+    }
+
+    else{
+
+        dropdown.style.display="block";
+
+    }
+
+});
+
+document.addEventListener("click",(e)=>{
+
+    if(
+
+        !profileBox.contains(e.target)
+
+        &&
+
+        !dropdown.contains(e.target)
+
+    ){
+
+        dropdown.style.display="none";
+
+    }
+
+});
+
+logoutButton.addEventListener("click",async()=>{
+
+    await signOut(auth);
+
+    location.reload();
+
+});
