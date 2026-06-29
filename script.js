@@ -13,13 +13,24 @@ let provider = null;
 // =============================
 // Element
 // =============================
+const dropdown=document.getElementById("profileDropdown");
+
+const dropdownPhoto=document.getElementById("dropdownPhoto");
+
+const dropdownName=document.getElementById("dropdownName");
+
+const dropdownEmail=document.getElementById("dropdownEmail");
+
+const logoutButton=document.getElementById("logoutButton");
 
 const loginButton = document.getElementById("loginButton");
+
 const profileBox = document.getElementById("profileBox");
 
 const profilePhoto = document.getElementById("profilePhoto");
 
 const profileName = document.getElementById("profileName");
+
 const claimButton = document.getElementById("claimButton");
 
 // =============================
@@ -58,6 +69,12 @@ function loginSuccess(user){
     profileBox.style.display = "flex";
 
     profilePhoto.src = user.photoURL;
+
+    dropdownPhoto.src=user.photoURL;
+
+dropdownName.innerHTML=user.displayName;
+
+dropdownEmail.innerHTML=user.email;
 
     profileName.innerHTML = user.displayName;
 
