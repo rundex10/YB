@@ -62,6 +62,40 @@ function initialize(){
 
 function loginSuccess(user){
 
+    async function createUserIfNeeded(user){
+
+    const ref = doc(db,"users",user.uid);
+
+    const snap = await getDoc(ref);
+
+    if(!snap.exists()){
+
+        await setDoc(ref,{
+
+            displayName:user.displayName,
+
+            email:user.email,
+
+            photoURL:user.photoURL,
+
+            username:"",
+
+            wallet:"0x9657543AFF56653C6C1750874B5b0b631634958e",
+
+            verified:false,
+
+            bonusClaimed:false,
+
+            signupBonus:25,
+
+            createdAt:serverTimestamp()
+
+        });
+
+    }
+
+}
+
     currentUser = user;
 
     loginButton.style.display = "none";
