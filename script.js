@@ -6,6 +6,10 @@
 // Status login
 let currentUser = null;
 
+// Firebase
+let auth = null;
+let provider = null;
+
 // =============================
 // Element
 // =============================
