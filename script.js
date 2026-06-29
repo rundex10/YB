@@ -15,6 +15,11 @@ let provider = null;
 // =============================
 
 const loginButton = document.getElementById("loginButton");
+const profileBox = document.getElementById("profileBox");
+
+const profilePhoto = document.getElementById("profilePhoto");
+
+const profileName = document.getElementById("profileName");
 const claimButton = document.getElementById("claimButton");
 
 // =============================
@@ -48,7 +53,13 @@ function loginSuccess(user){
 
     currentUser = user;
 
-    loginButton.innerHTML = user.displayName;
+    loginButton.style.display = "none";
+
+    profileBox.style.display = "flex";
+
+    profilePhoto.src = user.photoURL;
+
+    profileName.innerHTML = user.displayName;
 
     claimButton.style.display = "inline-flex";
 
