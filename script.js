@@ -157,6 +157,8 @@ async function loginSuccess(user) {
 
     profileBox.style.display = "flex";
 
+    walletMenu.style.display = "block";
+
     claimButton.style.display = "inline-flex";
 
     profilePhoto.src = user.photoURL;
@@ -279,6 +281,8 @@ function logoutUI() {
     claimButton.style.display = "none";
 
     dropdown.style.display = "none";
+
+    walletMenu.style.display = "none";
 
 }
 
