@@ -421,3 +421,121 @@ footer{
     font-weight:600;
 
 }
+
+/* ==========================
+PROFILE DROPDOWN
+========================== */
+
+#profileDropdown{
+
+    position:absolute;
+
+    top:80px;
+
+    right:8%;
+
+    width:340px;
+
+    background:#101826;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    display:none;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+
+    z-index:999;
+
+}
+
+.profileHeader{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+}
+
+.profileHeader img{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+}
+
+.profileHeader h3{
+
+    font-size:18px;
+
+}
+
+.profileHeader p{
+
+    color:#9aa9bd;
+
+    font-size:14px;
+
+}
+
+.label{
+
+    color:#7f93aa;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+}
+
+.walletAddress{
+
+    font-size:13px;
+
+    background:#182333;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    word-break:break-all;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#dc2626;
+
+    padding:8px 15px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+#logoutButton{
+
+    width:100%;
+
+    margin-top:20px;
+
+    background:#2563eb;
+
+    color:white;
+
+}
